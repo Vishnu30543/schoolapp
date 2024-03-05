@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addadm</title>
+</head>
+<body>
+   <h1>Welcome to Add Admission page<br/>
+    </h1>
+    <h3> Please fill below application form</h3>
+
+    <form method="POST">
+        {{form.as_p}}  <!--can also give as_table by giving table tags above and below -->
+
+    <br/>
+    <input type="submit" value="Add Student">
+
+        {% csrf_token %}
+     </form>
+</body>
+</html>

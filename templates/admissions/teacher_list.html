@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher report</title>
+</head>
+<body>
+<h1>Admissions Report : 2024-25</h1>
+<br/>
+
+<table border="1">
+    <tr>
+        <th> Teacher Name </th>
+        <th> Subject </th>
+        <th> Exp </th>
+        <th> Contact</th>
+        <th> Actions</th>
+    </tr>
+
+{% for s in teacher_list %}
+<tr>
+    <td><a href="/ad/getteacherdetails/{{s.id}}"> {{s.id}} </a> </td>
+    <td>{{s.name}} </td>
+    <td>{{s.subject}} </td>
+    <td>{{s.exp}} </td>
+    <td>{{s.contact}} </td>
+    <td> <a href="/ad/deleteteacher/{{s.id}}">Delete</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/ad/updateteacher/{{s.id}}">Update</a>
+
+    </td>
+</tr>
+
+{% endfor %}
+</table>
+</body>
+</html>

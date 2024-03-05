@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+    <link rel="stylesheet" href="{% static 'stylesheets/style.css' %}"/>
+</head>
+<body>
+    <br/>
+    <h2><img src="{% static 'images/iphone.png' %}" alt="image not found"/> Welcome to Academy</h2>
+    <br/><br/>
+    <hr/>
+    <br/>
+    <div class="module">
+        <h1>Admissions</h1> <br/>
+        <a href="/ad/addadm"><button type="button" name="button">Add Admission</button></a> <br/> <br/>
+        <a href="/ad/admr"><button type="button" name="button">Admission Report</button></a> <br/> <br/>
+    </div>
+
+    <div class="module">
+        <h1>Finance</h1> <br/>
+        <a href="/fin/feecol"><button type="button" name="button">Fee Collection</button></a> <br/> <br/>
+        <a href="/fin/feeduer"><button type="button" name="button">Fee Collection Report</button></a> <br/> <br/>
+        <a href="/fin/feecolr/"><button type="button" name="button">Fee Dues Report</button></a> <br/> <br/>
+    </div>
+
+    <br/>
+    <br/>
+
+    <form method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+    <button type="submit">Logout</button>
+    </form>
+
+</body>
+</html>

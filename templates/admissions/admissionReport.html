@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admreport</title>
+</head>
+<body>
+<h1>Admissions Report : 2024-25</h1>
+<br/>
+
+<table border="1">
+    <tr>
+        <th> Student Name </th>
+        <th> Father Name </th>
+        <th> class</th>
+        <th> Contact</th>
+        <th> Actions</th>
+    </tr>
+
+{% for s in allstudents %}
+<tr>
+    <td>{{s.name}} </td>
+    <td>{{s.fathername}} </td>
+    <td>{{s.classname}} </td>
+    <td>{{s.contact}} </td>
+    <td> <a href="/ad/delete/{{s.id}}">Delete</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="/ad/update/{{s.id}}">Update</a>
+
+    </td>
+</tr>
+
+{% endfor %}
+</table>
+</body>
+</html>

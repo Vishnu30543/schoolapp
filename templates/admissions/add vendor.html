@@ -1,0 +1,22 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add vendor</title>
+</head>
+<body>
+   <h1>Welcome to Add Vendor page<br/>
+    </h1>
+    <h3> Please fill below application form</h3>
+
+    <form method="POST">
+        <table>
+            {{form.as_table}}  <!--can also give as_table by giving table tags above and below -->
+        </table>
+    <br/>
+    <input type="submit" value="Add Vendor">
+
+        {% csrf_token %}
+     </form>
+</body>
+</html>
